@@ -15,7 +15,11 @@ class MenuController {
         let categoryURL = baseURL.appendingPathComponent("categories")
         
         let task = URLSession.shared.dataTask(with: categoryURL) { (data, response, error) in
-            
+            guard let data = data, let categories = try? JSONDecoder().decode(Categories.self, from: data) else {
+                completion(nil)
+                return
+            }
+            completion(categories.categories)
         }
         task.resume()
     }
@@ -25,12 +29,16 @@ class MenuController {
         let menuURL = initialMenuURL.withQuery(["category": category])!
         
         let task = URLSession.shared.dataTask(with: menuURL) { (data, response, error) in
-            
+            guard let data = data , let menuItems = try? JSONDecoder().decode(MenuItems.self, from: data) else {
+                completion(nil)
+                return
+            }
+            completion(menuItems.items)
         }
         task.resume()
     }
     
-    func submitOrder(menuIds: [Int], completion: @escaping ([Int]?) -> Void) {
+    func submitOrder(menuIds: [Int], completion: @escaping (Int?) -> Void) {
         let orderURL = baseURL.appendingPathComponent("order")
         
         var request = URLRequest(url: orderURL)
@@ -44,7 +52,11 @@ class MenuController {
         request.httpBody = jsonData
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            
+            guard let data = data, let preparationTime = try? JSONDecoder().decode(PreparationTime.self, from: data) else {
+                completion(nil)
+                return
+            }
+            completion(preparationTime.prepTime)
         }
         task.resume()
     }
