@@ -9,6 +9,8 @@
 import Foundation
 
 class MenuController {
+    static let shared = MenuController()
+    
     let baseURL = URL(string: "http://127.0.0.1:8090/")!
     
     func fetchCategories(completion: @escaping ([String]?) -> Void) {
