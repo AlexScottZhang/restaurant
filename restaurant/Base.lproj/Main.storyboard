@@ -150,6 +150,9 @@
                                         <state key="normal" title="添加到订单">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="orderButtonTapped:" destination="wK3-2e-6pp" eventType="touchUpInside" id="GDl-Xi-6JO"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -164,6 +167,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ixo-qu-01w"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="cqV-ZB-ZNg" id="VJo-KQ-5L1"/>
+                        <outlet property="imageView" destination="upl-gT-vhX" id="Pg7-Bn-TbP"/>
+                        <outlet property="nameLabel" destination="E68-GW-afl" id="X3e-NF-c49"/>
+                        <outlet property="orderButton" destination="9wL-pW-t6l" id="HuN-jg-W3A"/>
+                        <outlet property="priceLabel" destination="Jn0-UI-Vo7" id="p6c-Tl-Dbm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nz8-W1-Ve9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
