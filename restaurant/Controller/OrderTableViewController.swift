@@ -15,7 +15,6 @@ class OrderTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
 
 
@@ -42,6 +41,23 @@ class OrderTableViewController: UITableViewController {
         cell.detailTextLabel?.text = String(format: "$%.2f", menuItem.price)
     }
 
-    
-
 }
+
+extension OrderTableViewController: AddToOrderDelegate {
+    func added(menuItem: MenuItem) {
+        menuItems.append(menuItem)
+        let indexPath = IndexPath(row: menuItems.count - 1, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

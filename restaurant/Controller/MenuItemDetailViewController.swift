@@ -16,11 +16,12 @@ class MenuItemDetailViewController: UIViewController {
     @IBOutlet weak var orderButton: UIButton!
     
     var menuItem: MenuItem!
+    var delegate: AddToOrderDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         updateUI()
+        setupDelegate()
     }
 
     @IBAction func orderButtonTapped(_ sender: UIButton) {
@@ -28,15 +29,14 @@ class MenuItemDetailViewController: UIViewController {
             self.orderButton.transform = CGAffineTransform(scaleX: 3.0, y: 3.0)
             self.orderButton.transform = CGAffineTransform.identity
         }
-//        UIView.animate(withDuration: 0.3, animations: {
-//            self.orderButton.transform = CGAffineTransform(scaleX: 3.0, y: 3.0)
-//        }) { (_) in
-//            UIView.animate(withDuration: 0.3, animations: {
-//                self.orderButton.transform = CGAffineTransform.identity
-//            })
-//        }
+        delegate?.added(menuItem: menuItem)
     }
     
+    func setupDelegate() {
+        if let navController = tabBarController?.viewControllers?.last as? UINavigationController, let orderTableViewController = navController.viewControllers.first as? OrderTableViewController {
+            delegate = orderTableViewController
+        }
+    }
     
     func updateUI() {
         nameLabel.text = menuItem.name
