@@ -14,7 +14,8 @@ class OrderTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationItem.leftBarButtonItem = editButtonItem
     }
 
     //badge显示选择的menu数
@@ -38,6 +39,19 @@ class OrderTableViewController: UITableViewController {
         configure(cell: cell, cellForRowAt: indexPath)
         
         return cell
+    }
+    
+    // MARK: - Table view Delegate
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            menuItems.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            updateBadgeNumber()
+        }
     }
     
     func configure(cell: UITableViewCell, cellForRowAt indexPath: IndexPath) {
