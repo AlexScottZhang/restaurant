@@ -18,6 +18,7 @@
 		355B6CB220C4EAF4007E8BE6 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CB120C4EAF4007E8BE6 /* MenuItem.swift */; };
 		355B6CB420C5120F007E8BE6 /* IntermediaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CB320C5120F007E8BE6 /* IntermediaryModels.swift */; };
 		355B6CB720C513F0007E8BE6 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CB620C513F0007E8BE6 /* MenuController.swift */; };
+		355B6CBA20C517A5007E8BE6 /* URL+helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CB920C517A5007E8BE6 /* URL+helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		355B6CB120C4EAF4007E8BE6 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		355B6CB320C5120F007E8BE6 /* IntermediaryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediaryModels.swift; sourceTree = "<group>"; };
 		355B6CB620C513F0007E8BE6 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		355B6CB920C517A5007E8BE6 /* URL+helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				355B6C9520C3CD56007E8BE6 /* AppDelegate.swift */,
 				355B6CB020C4EAE0007E8BE6 /* Model */,
 				355B6CA720C4E88C007E8BE6 /* Controller */,
+				355B6CB820C51790007E8BE6 /* Extension */,
 				355B6C9920C3CD56007E8BE6 /* Main.storyboard */,
 				355B6C9C20C3CD59007E8BE6 /* Assets.xcassets */,
 				355B6C9E20C3CD59007E8BE6 /* LaunchScreen.storyboard */,
@@ -104,6 +107,14 @@
 				355B6CB620C513F0007E8BE6 /* MenuController.swift */,
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		355B6CB820C51790007E8BE6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				355B6CB920C517A5007E8BE6 /* URL+helpers.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 				355B6CB720C513F0007E8BE6 /* MenuController.swift in Sources */,
 				355B6CAF20C4E9DA007E8BE6 /* MenuItemDetailViewController.swift in Sources */,
 				355B6CAD20C4E8C7007E8BE6 /* OrderTableViewController.swift in Sources */,
+				355B6CBA20C517A5007E8BE6 /* URL+helpers.swift in Sources */,
 				355B6C9620C3CD56007E8BE6 /* AppDelegate.swift in Sources */,
 				355B6CB220C4EAF4007E8BE6 /* MenuItem.swift in Sources */,
 				355B6CA920C4E8AF007E8BE6 /* CategoryTableViewController.swift in Sources */,

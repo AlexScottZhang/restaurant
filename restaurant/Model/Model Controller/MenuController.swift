@@ -12,14 +12,52 @@ class MenuController {
     let baseURL = URL(string: "http://127.0.0.1:8090/")!
     
     func fetchCategories(completion: @escaping ([String]?) -> Void) {
+        let categoryURL = baseURL.appendingPathComponent("categories")
         
+        let task = URLSession.shared.dataTask(with: categoryURL) { (data, response, error) in
+            
+        }
+        task.resume()
     }
     
     func fetchMenuItems(category: String, completion: @escaping ([MenuItem]?) -> Void) {
+        let initialMenuURL = baseURL.appendingPathComponent("menu")
+        let menuURL = initialMenuURL.withQuery(["category": category])!
         
+        let task = URLSession.shared.dataTask(with: menuURL) { (data, response, error) in
+            
+        }
+        task.resume()
     }
     
     func submitOrder(menuIds: [Int], completion: @escaping ([Int]?) -> Void) {
+        let orderURL = baseURL.appendingPathComponent("order")
         
+        var request = URLRequest(url: orderURL)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let data: [String: [Int]] = ["menuIds": menuIds]
+        let jsonEncoder = JSONEncoder()
+        let jsonData = try? jsonEncoder.encode(data)
+        
+        request.httpBody = jsonData
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+        }
+        task.resume()
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
