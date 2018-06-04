@@ -26,6 +26,7 @@ class MenuItemDetailViewController: UIViewController {
 
     @IBAction func orderButtonTapped(_ sender: UIButton) {
         UIView.animate(withDuration: 0.3) {
+            //比正常的效果更好
             self.orderButton.transform = CGAffineTransform(scaleX: 3.0, y: 3.0)
             self.orderButton.transform = CGAffineTransform.identity
         }

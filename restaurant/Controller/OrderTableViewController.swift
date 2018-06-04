@@ -17,6 +17,11 @@ class OrderTableViewController: UITableViewController {
 
     }
 
+    //badge显示选择的menu数
+    func updateBadgeNumber() {
+        let badgeValue = menuItems.count > 0 ? "\(menuItems.count)" : nil
+        navigationController?.tabBarItem.badgeValue = badgeValue
+    }
 
     // MARK: - Table view data source
 
@@ -48,6 +53,7 @@ extension OrderTableViewController: AddToOrderDelegate {
         menuItems.append(menuItem)
         let indexPath = IndexPath(row: menuItems.count - 1, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
+        updateBadgeNumber()
     }
 }
 
