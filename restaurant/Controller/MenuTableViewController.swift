@@ -31,7 +31,14 @@ class MenuTableViewController: UITableViewController {
         }
     }
 
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MenuDetailSegue" {
+            let destination = segue.destination as! MenuItemDetailViewController
+            let indexPath = tableView.indexPathForSelectedRow!
+            let menuItem = menuItems[indexPath.row]
+            destination.menuItem = menuItem
+        }
+    }
 
     // MARK: - Table view data source
 
