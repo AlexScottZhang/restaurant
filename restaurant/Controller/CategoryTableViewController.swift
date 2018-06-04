@@ -29,6 +29,13 @@ class CategoryTableViewController: UITableViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MenuSegue" {
+            let destination = segue.destination as! MenuTableViewController
+            let indexPath = tableView.indexPathForSelectedRow!
+            destination.category = categories[indexPath.row]
+        }
+    }
     
     // MARK: - Table view data source
 
