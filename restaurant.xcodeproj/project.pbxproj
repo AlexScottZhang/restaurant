@@ -17,6 +17,7 @@
 		355B6CAF20C4E9DA007E8BE6 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CAE20C4E9DA007E8BE6 /* MenuItemDetailViewController.swift */; };
 		355B6CB220C4EAF4007E8BE6 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CB120C4EAF4007E8BE6 /* MenuItem.swift */; };
 		355B6CB420C5120F007E8BE6 /* IntermediaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CB320C5120F007E8BE6 /* IntermediaryModels.swift */; };
+		355B6CB720C513F0007E8BE6 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CB620C513F0007E8BE6 /* MenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		355B6CAE20C4E9DA007E8BE6 /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
 		355B6CB120C4EAF4007E8BE6 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		355B6CB320C5120F007E8BE6 /* IntermediaryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediaryModels.swift; sourceTree = "<group>"; };
+		355B6CB620C513F0007E8BE6 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +93,17 @@
 			children = (
 				355B6CB120C4EAF4007E8BE6 /* MenuItem.swift */,
 				355B6CB320C5120F007E8BE6 /* IntermediaryModels.swift */,
+				355B6CB520C513BD007E8BE6 /* Model Controller */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		355B6CB520C513BD007E8BE6 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				355B6CB620C513F0007E8BE6 /* MenuController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355B6CB720C513F0007E8BE6 /* MenuController.swift in Sources */,
 				355B6CAF20C4E9DA007E8BE6 /* MenuItemDetailViewController.swift in Sources */,
 				355B6CAD20C4E8C7007E8BE6 /* OrderTableViewController.swift in Sources */,
 				355B6C9620C3CD56007E8BE6 /* AppDelegate.swift in Sources */,
