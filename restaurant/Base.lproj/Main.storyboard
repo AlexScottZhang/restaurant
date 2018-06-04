@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -106,7 +107,61 @@
                     <view key="view" contentMode="scaleToFill" id="MuB-Sr-jch">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bUW-ZF-Cm6">
+                                <rect key="frame" x="16" y="72" width="343" height="538"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gray" translatesAutoresizingMaskIntoConstraints="NO" id="upl-gT-vhX">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="167"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oza-Su-5Gf">
+                                        <rect key="frame" x="0.0" y="175" width="343" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="E68-GW-afl">
+                                                <rect key="frame" x="0.0" y="0.0" width="263" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 27.83" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jn0-UI-Vo7">
+                                                <rect key="frame" x="263" y="0.0" width="80" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="87a-xu-0zR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqV-ZB-ZNg">
+                                        <rect key="frame" x="0.0" y="203.5" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="COU-nq-syo">
+                                        <rect key="frame" x="0.0" y="232" width="343" height="268"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wL-pW-t6l">
+                                        <rect key="frame" x="0.0" y="508" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="添加到订单">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ixo-qu-01w" firstAttribute="trailing" secondItem="bUW-ZF-Cm6" secondAttribute="trailing" constant="16" id="6fM-lq-zEU"/>
+                            <constraint firstItem="upl-gT-vhX" firstAttribute="height" secondItem="MuB-Sr-jch" secondAttribute="height" multiplier="0.25" id="XUB-YS-fY0"/>
+                            <constraint firstItem="ixo-qu-01w" firstAttribute="bottom" secondItem="bUW-ZF-Cm6" secondAttribute="bottom" constant="8" id="hRn-Zr-9yx"/>
+                            <constraint firstItem="bUW-ZF-Cm6" firstAttribute="leading" secondItem="ixo-qu-01w" secondAttribute="leading" constant="16" id="iEZ-7L-a7p"/>
+                            <constraint firstItem="bUW-ZF-Cm6" firstAttribute="top" secondItem="ixo-qu-01w" secondAttribute="top" constant="8" id="xpg-e5-0nv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ixo-qu-01w"/>
                     </view>
                 </viewController>
@@ -196,4 +251,7 @@
             <point key="canvasLocation" x="-154.40000000000001" y="398.05097451274366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gray" width="100" height="100"/>
+    </resources>
 </document>
