@@ -179,7 +179,7 @@
             </objects>
             <point key="canvasLocation" x="3554" y="35"/>
         </scene>
-        <!--Root View Controller-->
+        <!--订单-->
         <scene sceneID="y3p-ef-DxI">
             <objects>
                 <tableViewController id="Gol-N1-3iC" customClass="OrderTableViewController" customModule="restaurant" customModuleProvider="target" sceneMemberID="viewController">
@@ -218,11 +218,52 @@
                             <outlet property="delegate" destination="Gol-N1-3iC" id="MJg-IX-sng"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="oOA-b5-ItJ"/>
+                    <navigationItem key="navigationItem" title="订单" id="oOA-b5-ItJ"/>
+                    <connections>
+                        <segue destination="Qdx-l4-vIW" kind="presentation" identifier="ConfirmationSegue" id="eUM-Z9-8QG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vwt-Ok-ydc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1736.8" y="765.96701649175418"/>
+        </scene>
+        <!--Order Confirmation View Controller-->
+        <scene sceneID="Uw5-Yd-91J">
+            <objects>
+                <viewController id="Qdx-l4-vIW" customClass="OrderConfirmationViewController" customModule="restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oX0-DR-5XJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Emk-Ct-8ey">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qz-71-2kS">
+                                <rect key="frame" x="172" y="369" width="31" height="30"/>
+                                <state key="normal" title="返回"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Emk-Ct-8ey" firstAttribute="centerY" secondItem="oX0-DR-5XJ" secondAttribute="centerY" id="2uy-1e-j5G"/>
+                            <constraint firstItem="3qz-71-2kS" firstAttribute="centerX" secondItem="oX0-DR-5XJ" secondAttribute="centerX" id="Ja6-B3-b9x"/>
+                            <constraint firstItem="Emk-Ct-8ey" firstAttribute="centerX" secondItem="oX0-DR-5XJ" secondAttribute="centerX" id="SdO-iy-xuE"/>
+                            <constraint firstItem="3qz-71-2kS" firstAttribute="top" secondItem="Emk-Ct-8ey" secondAttribute="bottom" constant="25" id="qbE-ie-T7p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Arz-dk-M3S"/>
+                    </view>
+                    <connections>
+                        <outlet property="timeRemainingLabel" destination="Emk-Ct-8ey" id="Sk0-qu-scg"/>
+                        <segue destination="EJc-7F-lUO" kind="unwind" identifier="DismissConfirmation" unwindAction="unwindToOrderListWithSegue:" id="Jkd-MB-fAW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VlH-In-Wkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="EJc-7F-lUO" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2682" y="764"/>
         </scene>
         <!--订单-->
         <scene sceneID="LTk-po-3kF">

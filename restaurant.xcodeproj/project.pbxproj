@@ -20,6 +20,7 @@
 		355B6CB720C513F0007E8BE6 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CB620C513F0007E8BE6 /* MenuController.swift */; };
 		355B6CBA20C517A5007E8BE6 /* URL+helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CB920C517A5007E8BE6 /* URL+helpers.swift */; };
 		355B6CBD20C54EED007E8BE6 /* AddToOrderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CBC20C54EED007E8BE6 /* AddToOrderDelegate.swift */; };
+		355B6CBF20C59685007E8BE6 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CBE20C59685007E8BE6 /* OrderConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		355B6CB620C513F0007E8BE6 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		355B6CB920C517A5007E8BE6 /* URL+helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+helpers.swift"; sourceTree = "<group>"; };
 		355B6CBC20C54EED007E8BE6 /* AddToOrderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToOrderDelegate.swift; sourceTree = "<group>"; };
+		355B6CBE20C59685007E8BE6 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				355B6CAA20C4E8BE007E8BE6 /* MenuTableViewController.swift */,
 				355B6CAE20C4E9DA007E8BE6 /* MenuItemDetailViewController.swift */,
 				355B6CAC20C4E8C7007E8BE6 /* OrderTableViewController.swift */,
+				355B6CBE20C59685007E8BE6 /* OrderConfirmationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				355B6CB220C4EAF4007E8BE6 /* MenuItem.swift in Sources */,
 				355B6CA920C4E8AF007E8BE6 /* CategoryTableViewController.swift in Sources */,
 				355B6CAB20C4E8BE007E8BE6 /* MenuTableViewController.swift in Sources */,
+				355B6CBF20C59685007E8BE6 /* OrderConfirmationViewController.swift in Sources */,
 				355B6CB420C5120F007E8BE6 /* IntermediaryModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
