@@ -226,6 +226,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="submitBarButton" destination="u98-Nk-kao" id="FEh-jv-6UY"/>
                         <segue destination="Qdx-l4-vIW" kind="presentation" identifier="ConfirmationSegue" id="eUM-Z9-8QG"/>
                     </connections>
                 </tableViewController>

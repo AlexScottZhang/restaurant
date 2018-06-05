@@ -9,6 +9,8 @@
 import UIKit
 
 class OrderTableViewController: UITableViewController {
+    @IBOutlet weak var submitBarButton: UIBarButtonItem!
+    
     var menuItems = [MenuItem]()
     var orderMinutes = 0
     
@@ -16,8 +18,9 @@ class OrderTableViewController: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.leftBarButtonItem = editButtonItem
-        
+        updateSubmitButton()
     }
+    
 
     //badge显示选择的menu数
     func updateBadgeNumber() {
@@ -96,13 +99,19 @@ class OrderTableViewController: UITableViewController {
             menuItems.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             updateBadgeNumber()
+            updateSubmitButton()
         }
     }
     
+    // MARK: - Utilities
     func configure(cell: UITableViewCell, cellForRowAt indexPath: IndexPath) {
         let menuItem = menuItems[indexPath.row]
         cell.textLabel?.text = menuItem.name
         cell.detailTextLabel?.text = String(format: "$%.2f", menuItem.price)
+    }
+    
+    func updateSubmitButton() {
+        submitBarButton.isEnabled = menuItems.count > 0
     }
 
 }
@@ -113,6 +122,7 @@ extension OrderTableViewController: AddToOrderDelegate {
         let indexPath = IndexPath(row: menuItems.count - 1, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
         updateBadgeNumber()
+        updateSubmitButton()
     }
 }
 
