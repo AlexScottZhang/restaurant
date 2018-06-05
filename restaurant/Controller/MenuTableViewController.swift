@@ -39,7 +39,7 @@ class MenuTableViewController: UITableViewController {
         }
     }
 
-    // MARK: - Table view data source
+    // MARK: - Table view
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -56,10 +56,26 @@ class MenuTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     func configure(cell: UITableViewCell, cellForRowAt indexPath: IndexPath) {
         let menuItem = menuItems[indexPath.row]
         cell.textLabel?.text = menuItem.name
         cell.detailTextLabel?.text = String(format: "$%.2f", menuItem.price)
+        
+        MenuController.shared.fetchImage(url: menuItem.imageURL) { (image) in
+            guard let image = image else { return }
+            //配置图片前检查cell是否被reuse了
+            DispatchQueue.main.async {
+                if let currentIndexPath = self.tableView.indexPath(for: cell),
+                    currentIndexPath != indexPath {
+                    return
+                }
+                cell.imageView?.image = image
+            }
+        }
     }
 
     

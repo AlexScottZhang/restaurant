@@ -44,6 +44,14 @@ class MenuItemDetailViewController: UIViewController {
         priceLabel.text = String(format: "$%.2f", menuItem.price)
         descriptionLabel.text = menuItem.description
         orderButton.layer.cornerRadius = 5.0
+        
+        MenuController.shared.fetchImage(url: menuItem.imageURL) { (image) in
+            if let image = image {
+                DispatchQueue.main.async {
+                    self.imageView.image = image
+                }
+            }
+        }
     }
     
 
