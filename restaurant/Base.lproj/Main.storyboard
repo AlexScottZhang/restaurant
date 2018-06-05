@@ -218,7 +218,13 @@
                             <outlet property="delegate" destination="Gol-N1-3iC" id="MJg-IX-sng"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="订单" id="oOA-b5-ItJ"/>
+                    <navigationItem key="navigationItem" title="订单" id="oOA-b5-ItJ">
+                        <barButtonItem key="rightBarButtonItem" title="提交" id="u98-Nk-kao">
+                            <connections>
+                                <action selector="submitButtonTapped" destination="Gol-N1-3iC" id="eTf-QM-IX5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Qdx-l4-vIW" kind="presentation" identifier="ConfirmationSegue" id="eUM-Z9-8QG"/>
                     </connections>
@@ -244,6 +250,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qz-71-2kS">
                                 <rect key="frame" x="172" y="369" width="31" height="30"/>
                                 <state key="normal" title="返回"/>
+                                <connections>
+                                    <segue destination="EJc-7F-lUO" kind="unwind" identifier="DismissConfirmation" unwindAction="unwindToOrderListWithSegue:" id="XiQ-uA-PoX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -257,7 +266,6 @@
                     </view>
                     <connections>
                         <outlet property="timeRemainingLabel" destination="Emk-Ct-8ey" id="Sk0-qu-scg"/>
-                        <segue destination="EJc-7F-lUO" kind="unwind" identifier="DismissConfirmation" unwindAction="unwindToOrderListWithSegue:" id="Jkd-MB-fAW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VlH-In-Wkd" userLabel="First Responder" sceneMemberID="firstResponder"/>

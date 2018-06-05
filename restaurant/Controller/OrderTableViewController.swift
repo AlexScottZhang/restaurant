@@ -10,12 +10,13 @@ import UIKit
 
 class OrderTableViewController: UITableViewController {
     var menuItems = [MenuItem]()
-    
+    var orderMinutes = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.leftBarButtonItem = editButtonItem
+        
     }
 
     //badge显示选择的menu数
@@ -24,9 +25,48 @@ class OrderTableViewController: UITableViewController {
         navigationController?.tabBarItem.badgeValue = badgeValue
     }
     
-    //unwind segue
+    //segue
     @IBAction func unwindToOrderList(segue: UIStoryboardSegue) {
+        //返回时清空订单
+        if segue.identifier == "DismissConfirmation" {
+            menuItems.removeAll()
+            tableView.reloadData()
+            orderMinutes = 0
+            updateBadgeNumber()
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ConfirmationSegue" {
+            let destination = segue.destination as! OrderConfirmationViewController
+            destination.minutes = orderMinutes
+        }
+    }
+    
+    //submit user order
+    @IBAction func submitButtonTapped() {
+        let orderTotal = menuItems.reduce(0) { $0 + $1.price }
+        let formatTotal = String(format: "$%.2f", orderTotal)
         
+        let alert = UIAlertController(title: "确认订单", message: "你要提交总价为\(formatTotal)的订单么?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "提交", style: .default, handler: { (action) in
+            self.uploadOrder()
+        }))
+        alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func uploadOrder() {
+        let menuIds = menuItems.map { $0.id }
+        
+        MenuController.shared.submitOrder(menuIds: menuIds) { (minutes) in
+            if let minutes = minutes {
+                self.orderMinutes = minutes
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "ConfirmationSegue", sender: nil)
+                }
+            }
+        }
     }
 
     // MARK: - Table view data source
