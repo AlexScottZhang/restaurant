@@ -21,6 +21,7 @@
 		355B6CBA20C517A5007E8BE6 /* URL+helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CB920C517A5007E8BE6 /* URL+helpers.swift */; };
 		355B6CBD20C54EED007E8BE6 /* AddToOrderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CBC20C54EED007E8BE6 /* AddToOrderDelegate.swift */; };
 		355B6CBF20C59685007E8BE6 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CBE20C59685007E8BE6 /* OrderConfirmationViewController.swift */; };
+		355B6CC220C787E1007E8BE6 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CC120C787E1007E8BE6 /* MenuTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		355B6CB920C517A5007E8BE6 /* URL+helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+helpers.swift"; sourceTree = "<group>"; };
 		355B6CBC20C54EED007E8BE6 /* AddToOrderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToOrderDelegate.swift; sourceTree = "<group>"; };
 		355B6CBE20C59685007E8BE6 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
+		355B6CC120C787E1007E8BE6 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				355B6C9520C3CD56007E8BE6 /* AppDelegate.swift */,
+				355B6CC020C786E9007E8BE6 /* View */,
 				355B6CB020C4EAE0007E8BE6 /* Model */,
 				355B6CA720C4E88C007E8BE6 /* Controller */,
 				355B6CB820C51790007E8BE6 /* Extension */,
@@ -129,6 +132,14 @@
 				355B6CBC20C54EED007E8BE6 /* AddToOrderDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		355B6CC020C786E9007E8BE6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				355B6CC120C787E1007E8BE6 /* MenuTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +215,7 @@
 			files = (
 				355B6CB720C513F0007E8BE6 /* MenuController.swift in Sources */,
 				355B6CAF20C4E9DA007E8BE6 /* MenuItemDetailViewController.swift in Sources */,
+				355B6CC220C787E1007E8BE6 /* MenuTableViewCell.swift in Sources */,
 				355B6CAD20C4E8C7007E8BE6 /* OrderTableViewController.swift in Sources */,
 				355B6CBA20C517A5007E8BE6 /* URL+helpers.swift in Sources */,
 				355B6CBD20C54EED007E8BE6 /* AddToOrderDelegate.swift in Sources */,

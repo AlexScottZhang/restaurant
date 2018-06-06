@@ -50,7 +50,7 @@ class MenuTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! MenuTableViewCell
         configure(cell: cell, cellForRowAt: indexPath)
 
         return cell
@@ -60,10 +60,11 @@ class MenuTableViewController: UITableViewController {
         return 100
     }
     
-    func configure(cell: UITableViewCell, cellForRowAt indexPath: IndexPath) {
+    func configure(cell: MenuTableViewCell, cellForRowAt indexPath: IndexPath) {
         let menuItem = menuItems[indexPath.row]
-        cell.textLabel?.text = menuItem.name
-        cell.detailTextLabel?.text = String(format: "$%.2f", menuItem.price)
+        
+        cell.titleLabel.text = menuItem.name
+        cell.priceLabel.text = String(format: "$%.2f", menuItem.price)
         
         MenuController.shared.fetchImage(url: menuItem.imageURL) { (image) in
             guard let image = image else { return }
@@ -73,7 +74,7 @@ class MenuTableViewController: UITableViewController {
                     currentIndexPath != indexPath {
                     return
                 }
-                cell.imageView?.image = image
+                cell.menuImageView.image = image
             }
         }
     }
