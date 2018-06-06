@@ -23,6 +23,7 @@
 		355B6CBF20C59685007E8BE6 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CBE20C59685007E8BE6 /* OrderConfirmationViewController.swift */; };
 		355B6CC220C787E1007E8BE6 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CC120C787E1007E8BE6 /* MenuTableViewCell.swift */; };
 		355B6CC420C78BA0007E8BE6 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CC320C78BA0007E8BE6 /* OrderTableViewCell.swift */; };
+		355B6CC620C7919F007E8BE6 /* MenuItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CC520C7919F007E8BE6 /* MenuItemsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		355B6CBE20C59685007E8BE6 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		355B6CC120C787E1007E8BE6 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		355B6CC320C78BA0007E8BE6 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		355B6CC520C7919F007E8BE6 /* MenuItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				355B6CB620C513F0007E8BE6 /* MenuController.swift */,
+				355B6CC520C7919F007E8BE6 /* MenuItemsController.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				355B6CB720C513F0007E8BE6 /* MenuController.swift in Sources */,
 				355B6CAF20C4E9DA007E8BE6 /* MenuItemDetailViewController.swift in Sources */,
 				355B6CC220C787E1007E8BE6 /* MenuTableViewCell.swift in Sources */,
+				355B6CC620C7919F007E8BE6 /* MenuItemsController.swift in Sources */,
 				355B6CAD20C4E8C7007E8BE6 /* OrderTableViewController.swift in Sources */,
 				355B6CBA20C517A5007E8BE6 /* URL+helpers.swift in Sources */,
 				355B6CBD20C54EED007E8BE6 /* AddToOrderDelegate.swift in Sources */,

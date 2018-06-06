@@ -11,14 +11,20 @@ import UIKit
 class OrderTableViewController: UITableViewController {
     @IBOutlet weak var submitBarButton: UIBarButtonItem!
     
-    var menuItems = [MenuItem]()
+    var menuItems = [MenuItem]() {
+        didSet {
+            MenuItemsController.shared.saveToFile(with: menuItems)
+        }
+    }
     var orderMinutes = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        menuItems = MenuItemsController.shared.loadFromFile() ?? []
         navigationItem.leftBarButtonItem = editButtonItem
         updateSubmitButton()
+        updateBadgeNumber()
     }
     
 
