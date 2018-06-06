@@ -22,6 +22,7 @@
 		355B6CBD20C54EED007E8BE6 /* AddToOrderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CBC20C54EED007E8BE6 /* AddToOrderDelegate.swift */; };
 		355B6CBF20C59685007E8BE6 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CBE20C59685007E8BE6 /* OrderConfirmationViewController.swift */; };
 		355B6CC220C787E1007E8BE6 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CC120C787E1007E8BE6 /* MenuTableViewCell.swift */; };
+		355B6CC420C78BA0007E8BE6 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B6CC320C78BA0007E8BE6 /* OrderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		355B6CBC20C54EED007E8BE6 /* AddToOrderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToOrderDelegate.swift; sourceTree = "<group>"; };
 		355B6CBE20C59685007E8BE6 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		355B6CC120C787E1007E8BE6 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		355B6CC320C78BA0007E8BE6 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				355B6CC120C787E1007E8BE6 /* MenuTableViewCell.swift */,
+				355B6CC320C78BA0007E8BE6 /* OrderTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				355B6CAB20C4E8BE007E8BE6 /* MenuTableViewController.swift in Sources */,
 				355B6CBF20C59685007E8BE6 /* OrderConfirmationViewController.swift in Sources */,
 				355B6CB420C5120F007E8BE6 /* IntermediaryModels.swift in Sources */,
+				355B6CC420C78BA0007E8BE6 /* OrderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
