@@ -19,6 +19,13 @@ class CategoryTableViewController: UITableViewController {
                 self.updateUI(with: categories)
             }
         }
+        
+        //预先载入所有的tab bar view
+        tabBarController?.viewControllers?.forEach {
+            if let navController = $0 as? UINavigationController {
+                let _ = navController.topViewController?.view
+            } 
+        }
     }
 
     func updateUI(with categories: [String]) {
